@@ -15,7 +15,7 @@ const addToCart = (productId, qty) => async (dispatch, getState) => {
         qty
       }
     });
-    const { cart: { cartItems } } = getState();
+    const { cart: { cartItems } } = getState(); // { cartItems} = getState().cart.cartItems;
     Cookie.set("cartItems", JSON.stringify(cartItems));
 
   } catch (error) {

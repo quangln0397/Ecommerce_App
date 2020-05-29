@@ -12,12 +12,12 @@ function HomeScreen(props) {
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(listProducts(category));
+    dispatch(listProducts(category, sortOrder));
 
     return () => {
       //
     };
-  }, [category]);
+  }, [category, sortOrder]);
 
   const submitHandler = (e) => {
     e.preventDefault();
